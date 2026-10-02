@@ -3,6 +3,7 @@
 A lightweight browser-based drag-and-drop PUBG auction board for the COLD WAR Season 2 auction.
 
 ## Included
+- 14 confirmed teams and captains
 - Drag player cards into team rosters
 - Search by IGN and filter by role/status
 - Base price + current bid
