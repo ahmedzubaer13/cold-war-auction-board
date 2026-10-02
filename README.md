@@ -1,22 +1,20 @@
 # COLD WAR — Season 2 Auction Board
 
-A lightweight browser-based drag-and-drop PUBG auction board for the COLD WAR Season 2 auction.
+Browser-based drag-and-drop PUBG auction board. No build step: open `index.html`, or deploy the folder to any static host (e.g. Vercel). Keep `html2canvas.min.js` next to `index.html` (used for roster screenshots, works offline).
 
-## Included
-- 14 confirmed teams and captains
-- Drag player cards into team rosters
-- Search by IGN and filter by role/status
-- Base price + current bid
-- Available / Sold / Unsold state
-- Team spend + remaining-budget display
-- Random available-player picker
-- Add credits to any captain/team from the board
-- Save the Team Roster Board as a PNG screenshot
-- Browser local persistence
-- OBS-friendly dark esports layout
+## Features
+- Per-captain budgets (no fixed budget): set when adding a captain, change any time with **+ Points** (add or set)
+- **Live bid panel**: Pick Random Player, +500 / +1,000 / +5,000 / +10,000 buttons, leading captain, live remaining / max-bid check, **Confirm SOLD** or **Mark UNSOLD**
+- Budget + squad-size enforcement (override with a confirmation). Max bid reserves the base price for each empty slot
+- Drag a player onto a team, or use **Assign…** on the card (works on touch devices). Both ask for the selling price
+- **Unsold round**: when no players remain available, Pick Random offers to recycle unsold players
+- **Undo** (last 40 actions), **Sales Log**, **Export / Import JSON** backups
+- **Bulk Import** players (`IGN, Role`) and captains (`Name, Points`) from pasted lists
+- **OBS Mode**: hides controls, 4-column team grid (Esc to exit)
+- Roster screenshot (PNG), search and filters, browser local persistence
+- Esc closes dialogs, Enter submits
 
-## Run
-Open `index.html` directly in a browser, or deploy the folder to any static host such as Vercel.
-
-## Important
-The UI currently uses **100,000 BDT per team as a placeholder budget** because the final team auction budget was not confirmed in the event rules. Change the `budget:100000` value in `index.html` before the live auction.
+## Before the event
+1. ⚙ **Settings**: set max squad size (0 = unlimited) and default captain points
+2. Set the base price with **Set Base Starting Point**
+3. **Export** regularly as a backup. Data only lives in this browser's storage
